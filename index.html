@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Database Access Project</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script>
+            var username = document.getElementByName("username").value;
+            var password = document.getElementByName("password").value;
+            </script>
+        
+    </head>
+    <body style="background-image: url(https://hdwallsource.com/img/2014/6/cloud-wallpaper-21892-22445-hd-wallpapers.jpg); color:white">
+        <h1 align="center">ImageIn</h1>
+        <h2 align="center">Image Database</h2>
+        <form action="login.php" method="POST">
+            <table align="center" border="2">
+                <tr><td align="center"><br>
+                        Username: <br> <input type="text" name="username"><br>
+                        Password: <br> <input type="password" name="password"><br>                           
+                         
+            </td></tr>
+                <tr><td align="center"><br>
+                        <input type="submit" value="Login"> <br>
+            </td></tr>
+        </table>
+        </form>
+        <br>
+        <form action="register.php" method="POST">
+            <table align="right" border="2">
+                <tr><td align="center"> Not a Member? Register:<br>
+                        Choose a Username: <br> <input type="text" name="username"><br>
+                        Choose a Password: <br> <input type="password" name="password"><br>                           
+                     
+            </td></tr>
+                <tr><td align="center"><br>
+                        <input type="submit" value="Register"> <br>
+            </td></tr>
+        </table>
+        </form>
+    </body>
+</html>
