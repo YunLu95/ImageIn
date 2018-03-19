@@ -7,6 +7,7 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
+                <meta http-equiv="refresh" content="2;url=index.html">
         <title></title>
     </head>
     <body>
@@ -23,12 +24,14 @@ and open the template in the editor.
         
          $query1 = "INSERT INTO Login(Username, Password, Email) VALUES ('$username','$password', '$email')";   
          
-         if($resultSql->query($query1)==TRUE){echo $username.", You Have Successfully Registered!";}
+         if($resultSql->query($query1)==TRUE){
+         echo $username.", <h2>You Have Successfully Registered!</h2>";}
          else{ echo $username." Already Exists";}
          
          $resultSql->close();
          ?>
         
-        
+                <h2 align="center">Redirecting Back to Login...</h2>
+
        </body>
 </html>
