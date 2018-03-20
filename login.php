@@ -6,8 +6,8 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        
-        <meta http-equiv="refresh" content="2;url=index.html">
+                <meta charset="UTF-8">
+
         <title></title>
     </head>
     <body>
@@ -24,13 +24,10 @@ and open the template in the editor.
             $query1= "SELECT password FROM `login` WHERE username = '$username' and password = '$password'";
             
             if(mysqli_num_rows($resultSql->query($query1))==1){echo $username.", You Have Successfully Logged In!";}
-         else{ echo" Incorrect Username or Password";}
-         
+         else{ echo" Incorrect Username or Password";
+         }
          $resultSql->close();
         
         ?>
-        <script>
-        
-        </script>
     </body>
 </html>

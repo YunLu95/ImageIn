@@ -2,7 +2,7 @@
 
 <html>
     <head>
-        <title>Database Access Project</title>
+        <title>Imagein</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
@@ -10,13 +10,42 @@
             var username = document.getElementByName("username").value;
             var password = document.getElementByName("password").value;
             var email = email.getElementByName("email").value;
+            
+            
+            function validatelogin() {
+    var user = document.forms["login"]["username"].value;
+    var pass = document.forms["login"]["password"].value;
+    if (user === "") {
+        alert("Username must be filled out");
+        return false;
+    }else if (pass === "") {
+        alert("Password must be filled out");
+        return false;
+    }
+}
+
+function validateregister() {
+    var user = document.forms["register"]["username"].value;
+    var pass = document.forms["register"]["password"].value;
+    var email= document.forms["register"]["email"].value;
+    if (user === "") {
+        alert("Username must be filled out");
+        return false;
+    }else if (pass === "") {
+        alert("Password must be filled out");
+        return false;
+    }else if (email === "") {
+        alert("Email must be filled out");
+        return false;
+    }
+}
             </script>
         
     </head>
     <body style="background-image: url(https://hdwallsource.com/img/2014/6/cloud-wallpaper-21892-22445-hd-wallpapers.jpg); color:white">
-        <h1 align="center">ImageIn</h1>
-        <h2 align="center">Image Database</h2>
-        <form action="login.php" method="POST">
+        <h1 align="center"><img src="logo.png" alt="logo"></h1>
+        <h2 align="center">Imagine Differently.</h2>
+        <form name="login" action="login.php" onsubmit="return validatelogin()" method="POST">
             <table align="center" border="2">
                 <tr><td align="center"><br>
                         Username: <br> <input type="text" name="username"><br>
@@ -29,7 +58,7 @@
         </table>
         </form>
         <br>
-        <form action="register.php" method="POST">
+        <form name="register" action="register.php" onsubmit="return validateregister()"method="POST">
             <table align="right" border="2">
                 <tr><td align="center"> Not a Member? Register:<br>
                         Choose a Username: <br> <input type="text" name="username"><br>
