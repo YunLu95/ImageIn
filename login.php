@@ -23,7 +23,9 @@ and open the template in the editor.
         
             $query1= "SELECT password FROM `login` WHERE username = '$username' and password = '$password'";
             
-            if(mysqli_num_rows($resultSql->query($query1))==1){echo $username.", You Have Successfully Logged In!";}
+            if(mysqli_num_rows($resultSql->query($query1))==1){echo $username.", You Have Successfully Logged In!";
+            header("Location:profile.php");
+            }
          else{ echo" Incorrect Username or Password";
          }
          $resultSql->close();
